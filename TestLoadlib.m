@@ -36,10 +36,10 @@ wkdayPtr = libpointer('int16Ptr',0);
 %[rc, gdd, gmm, gyy, wkday] = calllib('hijrilib','GetGregorianDate',5,3,1446,gddPtr,gmmPtr,gyyPtr,wkdayPtr);
 
 analyzedData = data;
-analyzedData(4)=wkday;
-analyzedData(5)=hdd;
-analyzedData(6)=hmm;
-analyzedData(7)=hyy;
+analyzedData(7)=wkday;
+analyzedData(4)=hdd;
+analyzedData(5)=hmm;
+analyzedData(6)=hyy;
 
 %% Write Data %%
 thingSpeakWrite(writeChannelID, analyzedData, 'WriteKey', writeAPIKey);
