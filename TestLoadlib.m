@@ -42,6 +42,6 @@ analyzedData(6)=hyy;
 analyzedData(7)=wkday;
 analyzedData(8)=0;
 
-pause(15);
+pause(14);
 %% Write Data %%
 thingSpeakWrite(writeChannelID, analyzedData, 'WriteKey', writeAPIKey);
