@@ -5,9 +5,9 @@ readChannelID = 2615509;
 readAPIKey = 'NPYSI3IF4JF60BOE';
 
 % TODO - Replace the [] with channel ID to write data to:
-writeChannelID = 2615536;
+writeChannelID = 2615509;
 % TODO - Enter the Write API Key between the '' below:
-writeAPIKey = 'A23G4L39WKA7QI1M';
+writeAPIKey = '768J0959WE0ZL1GA';
 
 %% Read Data %%
 data = thingSpeakRead(readChannelID, 'ReadKey', readAPIKey);
@@ -36,10 +36,10 @@ wkdayPtr = libpointer('int16Ptr',0);
 %[rc, gdd, gmm, gyy, wkday] = calllib('hijrilib','GetGregorianDate',5,3,1446,gddPtr,gmmPtr,gyyPtr,wkdayPtr);
 
 analyzedData = data;
-analyzedData(7)=wkday;
 analyzedData(4)=hdd;
 analyzedData(5)=hmm;
 analyzedData(6)=hyy;
+analyzedData(7)=wkday;
 
 %% Write Data %%
 thingSpeakWrite(writeChannelID, analyzedData, 'WriteKey', writeAPIKey);
